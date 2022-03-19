@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css" type="text/css">
+    <title>Quiz App</title>
+</head>
+
+<body>
+    <!--Main page of the quiz-->
+    <main>
+        <h1>Welcome to your Quiz App</h1>
+        <button id="start_btn">Start Quiz</button>
+    </main>
+    <!--Instructions of the Quiz-->
+    <section class="instructions">
+        <h3>This are the rules for this Quiz</h3>
+        <div class="info">
+            <p>1. Choose the <span>Category</span> that you prefer.</p>
+            <p>2. You will have only <span>20 seconds</span> to answer the question.</p>
+            <p>3. Think carefully once you select an answer, you can't reselect.</p>
+            <p>4. If your answer is correct you'll advance to the next round and next difficulty.</p>
+            <p>5. There are <span>5 Rounds</span> for each <span>Category</span> and you can quit only before the time
+                has finished.</p>
+            <p>6. The Points Will be acumulated unless the Player doesn't answer a question.</p>
+            <p>7. So an advice if you don't know the question quit and take the points you have to redem.</p>
+            <button class="quit_btn">Quit</button>
+            <button id="continue_btn">Continue</button>
+        </div>
+    </section>
+    <!--Categories of the Quiz-->
+    <section class="categories">
+        <h3>Choose a Category</h3>
+        <div class="categories_container">
+            <div class="category">
+                <button id="sports"><img src="img/sports.jpg" alt="Sports"></button>
+                <h4>Sports</h4>
+            </div>
+            <div class="category">
+                <button><img src="img/programming.jpg" alt="Programming"></button>
+                <h4>Programming</h4>
+            </div>
+            <div class="category">
+                <button><img src="img/science.jpg" alt="Science"></button>
+                <h4>Science</h4>
+            </div>
+            <div class="category">
+                <button><img src="img/history.jpg" alt="History"></button>
+                <h4>History</h4>
+            </div>
+            <div class="category">
+                <button><img src="img/geography.jpg" alt="Geography">    </button>
+                <h4>Geography</h4>
+            </div>
+        </div>
+        <button class="exit_btn">Exit</button>
+    </section>
+    <!--Questions of the Quiz-->
+    <section>
+        <div class="question_container">
+            <h2 id="questions">Question</h2>
+            <hr>
+            <div class="options">
+                <button class="option_btn">A</button>
+                <button class="option_btn">B</button>
+                <button class="option_btn">C</button>
+                <button class="option_btn">D</button>
+            </div>
+            <hr>
+            <footer>
+                <p id="progress">Question a of b</p>
+            </footer>
+        </div>
+    </section>
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>
