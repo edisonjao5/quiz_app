@@ -22,6 +22,7 @@ const programming_btn = document.getElementById("programming");
 const science_btn = document.getElementById("science");
 const history_btn = document.getElementById("history");
 const geography_btn = document.getElementById("geography");
+const timer = document.getElementById("timer");
 
 start_btn.onclick = () => {
   instructions.classList.add("show");
@@ -46,6 +47,7 @@ sports_btn.onclick = () => {
   main.classList.add("show");
   question_container.classList.add("show");
   mainInterface(sportQuestion);
+  startTimer(timer);
 };
 
 programming_btn.onclick = () => {
@@ -54,6 +56,7 @@ programming_btn.onclick = () => {
   main.classList.add("show");
   question_container.classList.add("show");
   mainInterface(programmingQuestion);
+  startTimer(timer);
 };
 
 science_btn.onclick = () => {
@@ -62,6 +65,7 @@ science_btn.onclick = () => {
   main.classList.add("show");
   question_container.classList.add("show");
   mainInterface(scienceQuestion);
+  startTimer(timer);
 };
 
 history_btn.onclick = () => {
@@ -70,6 +74,7 @@ history_btn.onclick = () => {
   main.classList.add("show");
   question_container.classList.add("show");
   mainInterface(historyQuestion);
+  startTimer(timer);
 };
 
 geography_btn.onclick = () => {
@@ -78,6 +83,7 @@ geography_btn.onclick = () => {
   main.classList.add("show");
   question_container.classList.add("show");
   mainInterface(geographyQuestion);
+  startTimer(timer);
 };
 
 /**
@@ -106,4 +112,16 @@ function mainInterface(questionClass) {
   const interfaceQuestion = new Interface();
 
   render(quiz, interfaceQuestion);
+}
+
+let time;
+let timerValue = 60;
+function startTimer(timer) {
+  time = setInterval(function () {
+    timerValue--;
+    timer.innerHTML = `<p>Time: ${timerValue}</p>`;
+    if (timerValue === 0) {
+      clearInterval(time);
+    }
+  }, 1000);
 }

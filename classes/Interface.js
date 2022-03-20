@@ -34,7 +34,14 @@ export class Interface {
    * @param {number} score that is the score that will be rendered
    */
   showScore(score) {
-    const quizScore = `<h1>Your score is: ${score}</h1>`;
+    const restart_btn = document.getElementById("restart_btn");
+    const save_btn = document.getElementById("save_btn");
+    const showScore_btn = document.getElementById("showScore_btn");
+    const quizScore = `<h2>Your score is: ${score}</h2>
+    <h3>Thanks for playing!</h3>
+    <button class="option_btn" id="restart_btn">Restart</button>
+    <button class="option_btn" id="save_btn">Save</button>
+    <button class="option_btn" id="showScore_btn">Show High Scores</button>`;
     const scoreContainer = document.querySelector(".question_container");
     scoreContainer.innerHTML = quizScore;
   }

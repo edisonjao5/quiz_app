@@ -1,111 +1,150 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    background-color: #020024;
-    color: #eee9ce;
+body {
+  background-image: url("/img/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: -14rem;
+  color: #eee9ce;
 }
-h1{
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 10%;
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10%;
 }
 #start_btn,
 .instructions,
-.categories{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.categories,
+.question_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-main #start_btn{
-    background-color: #eee9ce;
-    color: #3d8285;
-    font-size: 1.9rem;
-    padding: 7px;
-    border-radius: 5px;
+main #start_btn {
+  background-color: #eee9ce;
+  color: #3d8285;
+  font-size: 1.9rem;
+  padding: 7px;
+  border-radius: 5px;
 }
 .instructions,
-.categories,
-.question_container{
-    background-color: #eee9ce;
-    color: #3d8285;
-    width: 80rem;
-    display: none;
-    font-size: 1rem;
-    padding: 1.5rem;
-    border-radius: 7px;
-    margin: 1.5rem 0;
+.categories {
+  background-color: #eee9ce;
+  color: #3d8285;
+  width: 80rem;
+  display: none;
+  font-size: 1rem;
+  padding: 1.5rem;
+  border-radius: 7px;
+  margin: 1.5rem 0;
 }
-.categories_container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
+.categories_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
-main.show{
-    display: none;
+.categories h3,
+.instructions h3 {
+  font-size: 2rem;
+}
+main.show {
+  display: none;
 }
 .instructions.show,
 .categories.show,
-.question_container.show{
-    display: block;
+.question_container.show {
+  display: block;
 }
-section h3{
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    font-size: 1.7rem;
-    font-weight: 800;
-    text-align: center;
-    border-bottom: 2px ridge #3d8285;
+section h3 {
+  margin: 1.5rem;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 800;
+  text-align: center;
+  border-bottom: 2px ridge #3d8285;
 }
+
+section h2 {
+  font-size: 1rem !important;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  word-spacing: 0.5rem;
+  margin: 1rem;
+}
+
 .info .quit_btn,
 .info #continue_btn,
-.categories .exit_btn{
-    background-color: #f5f5f5;
-    color: #3d8285;
-    font-size: 1.2rem;
-    width: 7rem;
-    padding: 7px;
-    border-radius: 5px;
-    margin-top: 2rem;
+.categories .exit_btn {
+  background-color: #f5f5f5;
+  color: #3d8285;
+  font-size: 1.2rem;
+  width: 7rem;
+  padding: 7px;
+  border-radius: 5px;
+  margin-top: 2rem;
 }
-.info .quit_btn{
-    margin-left: 60rem;
+.info .quit_btn:hover,
+.info #continue_btn:hover,
+.categories .exit_btn:hover,
+.option_btn:hover,
+main #start_btn:hover {
+  background-color: #3d8285;
+  color: #eee9ce;
 }
-.exit_btn{
-    position: absolute;
-    left: 50%;
-    bottom: 5%;
-    transform: translate(-50%, -50%);
+.info .quit_btn {
+  margin-left: 60rem;
 }
-.category img{
-    width: 250px;
-    height: 150px;
-    border-radius: 10px;
-    margin: auto;
+.exit_btn {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translate(-50%, -50%);
 }
-.category button{
-    border-radius: 15px;
-    border: 5px ridge #3d8285;
-    margin: 0 1.7rem;
-    text-align: center;
+.category img {
+  width: 250px;
+  height: 150px;
+  border-radius: 10px;
+  margin: auto;
 }
-.category h4{
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0.5rem 0 1rem 0;
-    text-align: center;
+.category button {
+  border-radius: 15px;
+  border: 5px ridge #3d8285;
+  margin: 0 1.7rem;
+  text-align: center;
 }
-.option_btn{
-    background-color: #f5f5f5;
-    color: #3d8285;
-    font-size: 1.2rem;
-    width: 7rem;
-    padding: 7px;
-    border-radius: 5px;
-    margin-top: 2rem;
+.category h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0 1rem 0;
+  text-align: center;
+}
+.question_container {
+  background-color: #eee9ce;
+  color: #3d8285;
+  width: 20rem;
+  display: none;
+  text-align: center;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1.5rem;
+  border-radius: 7px;
+  margin: 1.5rem;
+}
+.option_btn {
+  background-color: #f5f5f5;
+  color: #3d8285;
+  font-size: 1.2rem;
+  width: 15rem;
+  padding: 7px;
+  border-radius: 5px;
+  margin: 1rem;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
